@@ -1,0 +1,41 @@
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+  srand(time(NULL));
+  int input = 0;
+  char choice;
+  int guess = 1;
+  int playing = 1;
+  int number = rand() % 101;
+  //cout << number << endl;
+
+  while(playing == 1){
+    cout << "Please Guess a number" << endl;
+    cin >> input;
+      if (input == number){
+	cout << "Congratulations! It took you " << guess << " guesses!" << endl;
+	cout << "Would you like to play again? (y/n)";
+	  cin >> input;
+	if (choice == y){
+	  playing = 1;
+	}
+	else if (choice == n){
+	  cout << "Thank You for playing!";
+	  playing = 0;
+	}
+      }
+      else if(input < number){
+	cout << "Your number is too low. Guess again!" << endl;
+        guess++;
+      }
+      else{
+	cout << "Your Number is too high. Guess again!" << endl;
+	guess++;
+      }
+   }
+}
