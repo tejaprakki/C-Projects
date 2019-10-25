@@ -101,7 +101,7 @@ void PRINT(vector<Students*> student){
     //Print the Student's first name, last name, ID, and GPA
     cout << endl << "Name: " << (*a)->firstName << " " << (*a)->lastName << endl;
     cout << "Student ID: " << (*a)->studentID << endl;
-    cout << std::setprecision(3) << "GPA: " << (*a)->gpa << endl;
+    cout << fixed << std::setprecision(2) << "GPA: " << (*a)->gpa << endl;
   }
 }
 //Delete method
