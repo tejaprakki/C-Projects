@@ -5,23 +5,23 @@
 using namespace std;
 
 Student::Student(const char* setName, int studentID, float studentGPA){
-  strcpy(name, setName);
-  id = studentID;
-  gpa = studentGPA;
+  strcpy(name, setName); //Set name to input
+  id = studentID; //ID to imput
+  gpa = studentGPA; //GPA to input
 }
 
-Student::~Student(){
+Student::~Student(){ //destructor
   delete name;
 }
 
-char* Student::getName(){
-  return name;
+char* Student::getName(){ //returns name to student
+  return name; //return name
 }
 
-int Student::getID(){
-  return id;
+int Student::getID(){ //returns id to student
+  return id; //return id
 }
 
-float Student::getGPA(){
-  return gpa;
+float Student::getGPA(){ //return gpa to student
+  return gpa; //return gpa
 }
